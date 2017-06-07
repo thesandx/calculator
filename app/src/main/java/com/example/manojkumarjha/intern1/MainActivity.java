@@ -17,16 +17,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.addition);
     }
 
-    double a,b,c;
-    EditText t1 =(EditText)findViewById(R.id.num1);
-    EditText t2 = (EditText)findViewById(R.id.num2);
-    TextView result=(TextView)findViewById(R.id.result);
-
-    String quantity1= t1.getText().toString();
-    String quantity2= t2.getText().toString();
 
 
     public void findSum(View v){
+        double a,b,c;
+        EditText t1 =(EditText)findViewById(R.id.num1);
+        EditText t2 = (EditText)findViewById(R.id.num2);
+        Button button=(Button)findViewById(R.id.sum);
+        TextView result=(TextView)findViewById(R.id.result);
+
+        String quantity1= t1.getText().toString();
+        String quantity2= t2.getText().toString();
+
             try {
                 if (quantity1 != null && quantity1.length() >=0 && quantity2 != null && quantity2.length() >=0) {
                     a = Double.parseDouble(t1.getText().toString());
@@ -35,13 +37,24 @@ public class MainActivity extends AppCompatActivity {
                     result.setText("sum of " + a + " and " + b + " is " + c);
                 }
             } catch (NumberFormatException nfe) {
-                Log.e("sum button clicked", "Edittext is blank");
+                Log.e("tag", "msg");
                 Toast.makeText(MainActivity.this, R.string.error, Toast.LENGTH_SHORT).show();
+
             }
+
         }
 
 
     public void finddiff(View v){
+        double a,b,c;
+        EditText t1 =(EditText)findViewById(R.id.num1);
+        EditText t2 = (EditText)findViewById(R.id.num2);
+        Button button=(Button)findViewById(R.id.sum);
+        TextView result=(TextView)findViewById(R.id.result);
+
+        String quantity1= t1.getText().toString();
+        String quantity2= t2.getText().toString();
+
             try {
                 if (quantity1 != null && quantity1.length() >=0 && quantity2 != null && quantity2.length() >=0) {
                     a = Double.parseDouble(t1.getText().toString());
@@ -50,13 +63,24 @@ public class MainActivity extends AppCompatActivity {
                     result.setText("difference of " + a + " and " + b + " is " + c);
                 }
             } catch (NumberFormatException nfe) {
-                Log.e("diff button clicked", "Edittext is blank");
+                Log.e("tag", "msg");
                 Toast.makeText(MainActivity.this, R.string.error, Toast.LENGTH_SHORT).show();
+
             }
+
         }
 
 
     public void findmul(View v){
+       double a,b,c;
+        EditText t1 =(EditText)findViewById(R.id.num1);
+        EditText t2 = (EditText)findViewById(R.id.num2);
+        Button button=(Button)findViewById(R.id.sum);
+        TextView result=(TextView)findViewById(R.id.result);
+
+        String quantity1= t1.getText().toString();
+        String quantity2= t2.getText().toString();
+
             try {
                 if (quantity1 != null && quantity1.length() >=0 && quantity2 != null && quantity2.length() >=0) {
                     a = Double.parseDouble(t1.getText().toString());
@@ -64,13 +88,27 @@ public class MainActivity extends AppCompatActivity {
                     c = a * b;
                     result.setText("multiplication of " + a + " and " + b + " is " + c);
                 }
+
             } catch (NumberFormatException nfe) {
-                Log.e("mul button clicked", "Edittext is blank");
+                Log.e("tag", "msg");
                 Toast.makeText(MainActivity.this, R.string.error, Toast.LENGTH_SHORT).show();
+
             }
+
         }
 
+
+
     public void finddiv(View v){
+        double a,b,c;
+        EditText t1 =(EditText)findViewById(R.id.num1);
+        EditText t2 = (EditText)findViewById(R.id.num2);
+        Button button=(Button)findViewById(R.id.sum);
+        TextView result=(TextView)findViewById(R.id.result);
+
+        String quantity1= t1.getText().toString();
+        String quantity2= t2.getText().toString();
+
             try {
                 if (quantity1 != null && quantity1.length() >=0 && quantity2 != null && quantity2.length() >=0) {
                     a = Double.parseDouble(t1.getText().toString());
@@ -80,14 +118,23 @@ public class MainActivity extends AppCompatActivity {
                 }
 
             } catch (NumberFormatException nfe) {
-                Log.e("div button clicked", "Edittext is blank");
+                Log.e("tag", "msg");
                 Toast.makeText(MainActivity.this, R.string.error, Toast.LENGTH_SHORT).show();
+
             }
+
         }
-    public void clearall(View v){
+
+
+         public void clearall(View v){
+             EditText t1 =(EditText)findViewById(R.id.num1);
+             EditText t2 = (EditText)findViewById(R.id.num2);
+             TextView result=(TextView)findViewById(R.id.result);
              t1.getText().clear();
              t2.getText().clear();
              result.setText("");
+
+
             }
 
 }
